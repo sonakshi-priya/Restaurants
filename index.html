@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="origin" name="referrer" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Restaurants</title>
+    <meta name="description"
+        content="Get online food delivery from restaurants near you. Order Pizza, Chinese, Indian, Italian, Biryani and Fast Food online | Zomato.com" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, initial-scale=1">
+
+
+    <link rel="icon" type="image/png" href="https://b.zmtcdn.com/images/logo/zomato_logo_2017.png?output-format=webp" />
+    <link rel="apple-touch-icon-precomposed"
+        href="https://b.zmtcdn.com/images/logo/zomato_logo_2017.png?output-format=webp" />
+
+    <!--Meta tags for zomato pwa-->
+    <link rel="stylesheet" type="text/css"
+        href="https://static.zmtcdn.com/gencss/v3/t-fce05e705b469d889fdc20033ca4cdb8/l-H4sIAAAAAAAAA0tKLE7Vz0nVTS_KTNFLLi7WqcrPTUosKYawi0sSSzKTwezi1NzEPCBHH8YAiQIAP2LJTT4AAAA/h-aa3b4b3678ef87e4bfd576b3bc264859/fh-a540e49a5b31942917d22353921424f3" />
+    <link rel="stylesheet" type="text/css"
+        href="https://static.zmtcdn.com/gencss/v3/t-0c57355fa45991524c9596f96a2651aa/l-H4sIAAAAAAAAA8svSkkt0ksuLtbJB7H0843i8_NyKsEixam5iXklmcn6yfm5Bfl5qXklxfqZyfl5IEkA3dp4oTgAAAA/h-aa3b4b3678ef87e4bfd576b3bc264859/fh-a540e49a5b31942917d22353921424f3" />
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+        
+
+</head>
+
+<body class="white-bg en is-responsive ">
+
+
+    <div class="ghboxcontainer" style="visibility: hidden; display: none;">
+        <div id="ghbox"></div>
+    </div>
+
+    <div class="claims-app-container" id="claims-app-container"></div>
+    <div class="start ct-present">
+        <div id="sticky_header" class="ui sticky v2" style="height:0">
+            <header class="header " id="header">
+                <div class="header__container">
+                    <div class="header__wrapper">
+                        <div id="login-navigation" class="login__container right">
+                            <div class="header-link">
+                                <a href="#" class="signin-link header-login-button ui button mr0" id="signin-link">Log
+                                    in</a>
+                                <a href="#" class="signup-link header-login-button ui button mr0"
+                                    id="signup-link">Create an account</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="resp-search-container" class="search-box-area"></div>
+    </div>
+    <section class="o2_header zdark-bg"
+        style="background-image: url(https://b.zmtcdn.com/data/images/order/home_page_bg.jpg?output-format=webp);">
+        <div class="login_wrapper">
+            <div class="wrapper mt20">
+                <img src="https://b.zmtcdn.com/images/zomato_white_logo_new.svg">
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="heading_container">
+                <div class="heading medium white pl10">
+                    Order Food Online
+                </div>
+                <div class="fontsize2 white pt5 subtitle pl10">
+                    Best restaurants in <span id="city_name_best"></span> delivering to your doorstep
+                </div>
+            </div>
+
+            <div class="mt15">
+                <form class="clearfix" onsubmit="return false;">
+                    <div class="container flex brstd">
+                        <div class="city-container">
+                            <div class="ui fluid search selection dropdown city-search-dropdown" style="display: flex;">
+                                <input type="hidden" name="city">
+                                <img src="https://b.zmtcdn.com/data/images/icon/location.png?output-format=webp">
+                                <i class="dropdown icon"></i>
+                                <div class="city_id text nowrap w100 zblack fontsize2 pl10"
+                                    id="city_id_selected_dropdown" data-value="0">
+                                    
+                                </div>
+                                <div class="menu" tabindex="-1"></div>
+                            </div>
+                        </div>
+                        <div class="ui fluid order search">
+                            <div class="ui left icon large input w100" style="float: none;">
+                                <img class="location-arrow"
+                                    src="https://b.zmtcdn.com/data/images/icon/location_arrow.png?output-format=webp" />
+                                <input id="res_search_box" class="location prompt fontsize2" placeholder="Type restaurant name here..." 
+                                value="" />
+                                <div class="input-separator"></div>
+                                <button type="button" class="ui icon button auto-detect">
+                                    <span class="hide-on-mobile fontsize2">Detect</span>
+                                    <i class="icon" data-icon="8"></i>
+                                </button>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                        <button id="get_review_buttion" class="ui green large fluid button go-location">
+                            Get Reviewes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="reviewes">
+
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+    <script src = "https://code.jquery.com/jquery-migrate-3.0.0.min.js" ></script>
+        <!-- <script src="/js/main.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
