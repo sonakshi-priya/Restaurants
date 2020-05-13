@@ -111,7 +111,7 @@ $(window).on('load', function() {
     $("#get_review_buttion").on ('click', function () {
         console.log("one");
         
-        let s = $("#res_search_box").value;
+        let s = $("#res_search_box").val();
         try {
             let name_id = s.split ("|");
             let id = name_id[name_id.length - 1]
@@ -126,6 +126,7 @@ $(window).on('load', function() {
         console.log("two");
         
         let getReviewUrl = "https://developers.zomato.com/api/v2.1/reviews?res_id=" + id;
+        console.log (getReviewUrl);
         var xhttp = new XMLHttpRequest();
         var handleResponse = function () {
             // console.log (this.responseText);
@@ -146,9 +147,15 @@ $(window).on('load', function() {
     }
 
     function displayReviewes (reviewes) {
+        console.log ("three");
+        reviewes = reviewes.user_reviews;
+        console.log (reviewes);
+        $("#reviewes").empty();
         for (let i = 0; i < reviewes.length; i++) {
+            let r = reviewes[i]['review'];
+            if (r.review_text === "") continue;
             $("#reviewes").append (
-                "<div>" + reviewes[i].review_text + "<hr/></div>"
+                "<div>" + r.review_text + "<hr/></div>"
             );
         }
     }
